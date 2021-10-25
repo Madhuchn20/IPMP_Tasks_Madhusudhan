@@ -1,6 +1,9 @@
+/* Binary Search in C++ */
+
 #include<iostream>
 #include<algorithm>
 using namespace std;
+
 int main(){
     int n;
     cout<<"Enter array size: ";
@@ -10,27 +13,27 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    sort(a,a+n);
+    sort(a,a+n);    /*sorting the array before implementing bs*/
     int num;
     cout<<"The number to be searched: ";
     cin>>num;
-    int f=0,l=n-1, mid;
-    mid=(f+l)/2;
-    while(f<=l){
-        if(a[mid]<num){
-            f=mid+1;
+    int first=0,last=n-1, mid; /*assigning the first and last indices of the array to first and alst, respectively , after sorting*/
+    mid=(first+last)/2;
+    while(first<=last){
+        if(a[mid]<num){     
+            first=mid+1;    
         }
-        else if(a[mid]==num){
-            cout<<endl<<"The number is present in the array";
+        else if(a[mid]==num){        
+            cout<<endl<<"The number is present in the array";   /*the number is the middle element of the array*/
             break;
         }
         else{
-            l=mid-1;
+            last=mid-1;     /*the number is lesser than middle element of the array*/
         }
 
-        mid=(f+l)/2;
+        mid=(first+last)/2;
     }
-    if(f>l)
+    if(first>last)
         cout<<endl<<"The number does not exist in the array";
 
     return 0;

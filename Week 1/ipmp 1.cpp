@@ -17,18 +17,18 @@ int main(){
     int num;
     cout<<"The number to be searched: ";
     cin>>num;
-    int first=0,last=n-1, mid; /*assigning the first and last indices of the array to first and alst, respectively , after sorting*/
+    int first=0,last=n-1, mid; /*assigning the first and last indices of the array to first and last, respectively , after sorting*/
     mid=(first+last)/2;
     while(first<=last){
-        if(a[mid]<num){     
+        if(a[mid]<num){     /* the number is greater than the middle element of the array */
             first=mid+1;    
         }
         else if(a[mid]==num){        
-            cout<<endl<<"The number is present in the array";   /*the number is the middle element of the array*/
+            cout<<endl<<"The number is present in the array";   /* the number is the middle element of the array */
             break;
         }
         else{
-            last=mid-1;     /*the number is lesser than middle element of the array*/
+            last=mid-1;     /* the number is lesser than middle element of the array */
         }
 
         mid=(first+last)/2;

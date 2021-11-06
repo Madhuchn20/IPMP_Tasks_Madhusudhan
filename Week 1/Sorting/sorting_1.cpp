@@ -1,3 +1,5 @@
+//Merge Sort
+
 #include<iostream>
 using namespace std;
 void merge(int a[], int low, int mid, int high){
